@@ -102,6 +102,8 @@ class ArticleCrudController extends CrudController
             'contenu' => $request->contenu
         ]);
 
+        $article->user()->associate(auth('backpack')->user());
+
         $article->category()->associate($category);
         $article->save();
 

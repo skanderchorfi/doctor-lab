@@ -18,7 +18,7 @@ return [
          */
         'list' => [
             // Define the size/looks of the content div for all CRUDs
-            // To override per view use $this->crud->setListContentClass('class-string')
+            // To override er view use $this->crud->setListContentClass('class-string')
             'contentClass' => 'col-md-12',
 
             // enable the datatables-responsive plugin, which hides columns if they don't fit?
