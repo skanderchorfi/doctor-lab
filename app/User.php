@@ -1,18 +1,17 @@
 <?php
 
 namespace App;
-/*use Backpack\CRUD\CrudTrait; */
-/*use Spatie\Permission\Traits\HasRoles;*/
+
 use Backpack\CRUD\app\Models\Traits\CrudTrait; // <------------------------------- this one
-use Spatie\Permission\Traits\HasRoles;// <---------------------- and this one
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
 {
-    use CrudTrait; // <----- this
-    use HasRoles; // <------ and this*/
+    use CrudTrait;
+    use LaratrustUserTrait;
     use Notifiable;
 
     /**

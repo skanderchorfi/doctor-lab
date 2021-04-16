@@ -7,6 +7,7 @@
 // Routes you generate using Backpack\Generators will be placed here.
 
 use App\Http\Controllers\Admin\DashboardController;
+use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix'     => config('backpack.base.route_prefix', 'admin'),
@@ -21,4 +22,5 @@ Route::group([
     Route::get('charts/new-entries', 'Charts\NewEntriesChartController@response')->name('charts.new-entries.index');
     Route::crud('article', 'ArticleCrudController');
     Route::crud('category', 'CategoryCrudController');
+    Route::crud('medecin', 'UserCrudController');
 }); // this should be the absolute last line of this file
