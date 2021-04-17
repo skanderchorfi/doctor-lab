@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\LogoutIfNotActive;
+use Backpack\CRUD\app\Http\Controllers\Auth\LoginController;
 
 return [
 

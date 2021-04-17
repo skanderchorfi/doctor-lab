@@ -11,6 +11,8 @@
         <li class='nav-item'>
             <a class='nav-link' href='{{ backpack_url('medecin') }}'><i class='nav-icon la la-users'></i> Users</a>
         </li>
+        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('role') }}'><i class='nav-icon la la-question'></i> Roles</a></li>
+        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('permission') }}'><i class='nav-icon la la-question'></i> Permissions</a></li>
     </ul>
 </li>
 @elseif (auth('backpack')->user()->hasRole('medecin'))

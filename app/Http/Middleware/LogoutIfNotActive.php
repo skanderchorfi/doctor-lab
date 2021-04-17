@@ -16,11 +16,13 @@ class LogoutIfNotActive
      */
     public function handle($request, Closure $next)
     {
-        if (auth('backpack')->user()) {
+        if (auth('backpack')->check())
+        {
+            if (auth('backpack')->user()) {
 
-            if (auth('backpack')->user()->active == false) {
-                Auth::logout();
-
+                if (auth('backpack')->user()->active == false) {
+                    Auth::logout();
+                }
             }
         }
         return $next($request);
